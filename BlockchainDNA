@@ -1,0 +1,15 @@
+blockchain = ['First']
+
+def latest_block():
+    return blockchain[-1]
+
+def block(whole_block_chain, latest_block):
+    blockchain.append([latest_block, whole_block_chain])
+    
+
+block('Second', 'First')
+block('Third', latest_block())
+new_block = input('recent block')
+block(new_block, latest_block())
+
+print(blockchain)
